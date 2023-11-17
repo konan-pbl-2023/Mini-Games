@@ -6,32 +6,30 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="487dp"
-        android:layout_height="751dp"
+        android:id="@+id/imageView2"
+        android:layout_width="416dp"
+        android:layout_height="735dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/snake_back" />
+        app:srcCompat="@drawable/snake_back_1" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="214dp"
-        android:layout_height="61dp"
+        android:layout_width="274dp"
+        android:layout_height="70dp"
         android:text="snake game"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#14C324"
-        android:textSize="28sp"
+        android:textColor="#FF2222"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252" />
+        app:layout_constraintVertical_bias="0.122" />
 
     <Button
         android:id="@+id/snake_play_button"
