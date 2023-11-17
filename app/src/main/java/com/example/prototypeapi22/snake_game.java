@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.Random;
 
 // 参考: https://blog.recruit.co.jp/rmp/mobile/remember_canvas1/
 // https://ethanfjp.com/articles/blog/programing/20211219android#:~:text=Android%E3%81%AE%E7%94%BB%E9%9D%A2%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20API29%20%28Android10%29%E3%81%BE%E3%81%A7%E3%81%AE%E6%96%B9%E6%B3%95%20android.graphics.Point%20%E3%82%92%E4%BD%BF%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%20%E2%80%BB%E4%BB%A5%E4%B8%8B%E3%81%AFActivity%E3%81%AE%E4%B8%AD%E3%81%A7%E3%81%AE%E8%A8%98%E8%BF%B0%E3%81%AA%E3%81%AE%E3%81%A7%20this%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82,point.x%3B%20int%20height%20%3D%20point.y%3B%20%E9%96%A2%E6%95%B0%E3%81%AB%E3%81%99%E3%82%8B%E3%82%88%E3%81%86%E3%81%AA%E5%A0%B4%E5%90%88%E3%81%AF%E5%BC%95%E6%95%B0%E3%81%A8%E3%81%97%E3%81%A6%20Activity%20%E3%82%92%E6%B8%A1%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82
@@ -201,6 +202,8 @@ public class snake_game extends AppCompatActivity {
     class SnakeGameController {
         // 末尾要素をヘビの顔の座標としたヘビの体がある座標のリスト
         private final ArrayList<SnakeBody> snakeBody;
+
+        private SnakeBody feed;
         private final int rows;
         // ヘビの体1マスのサイズ
         private final int size;
@@ -231,6 +234,11 @@ public class snake_game extends AppCompatActivity {
             this.rows = rows;
             this.size = screenWidth/rows;
 
+            Random rnd = new Random();
+            int x = rnd.nextInt(rows);
+            int y = rnd.nextInt(rows);
+            this.feed = new SnakeBody(x, y, SnakeDiretion.Up);
+
             this.background_image =
                     Bitmap.createScaledBitmap(background_image, size, size, true);
             this.snake_head_image =
@@ -253,6 +261,13 @@ public class snake_game extends AppCompatActivity {
             for (int i = 0; i <= defaultSnakeLen; i++) {
                 snakeBody.add(new SnakeBody(i, rows/2 , defaultSnakeDirection));
             }
+        }
+
+        public void recreate_feed() {
+            Random rnd = new Random();
+            int x = rnd.nextInt(rows);
+            int y = rnd.nextInt(rows);
+            this.feed = new SnakeBody(x, y, SnakeDiretion.Up);
         }
 
         // ヘビを指定方向に動かす。壁や自分に衝突したときはfalseが返される。
@@ -295,6 +310,10 @@ public class snake_game extends AppCompatActivity {
                 if (v.is_clashing(new_head)) {
                     return false;
                 }
+
+                if (v.is_clashing((feed))) {
+                    this.recreate_feed();
+                }
             }
 
             snakeBody.remove(0);
@@ -306,6 +325,7 @@ public class snake_game extends AppCompatActivity {
         public void draw_snake(Canvas canvas) {
             Paint paint = new Paint();
             int i = 0;
+            canvas.drawBitmap(feed_image, feed.x*size, feed.y*size, paint);
             for (SnakeBody v : snakeBody) {
                 Bitmap b;
                 Matrix m = (
