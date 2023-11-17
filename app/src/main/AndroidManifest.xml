@@ -13,6 +13,12 @@
         android:theme="@style/Theme.PrototypeAPI22"
         tools:targetApi="34">
         <activity
+            android:name=".snake_result"
+            android:exported="false" />
+        <activity
+            android:name=".snake_title"
+            android:exported="false" />
+        <activity
             android:name=".speed_clear"
             android:exported="false" />
         <activity

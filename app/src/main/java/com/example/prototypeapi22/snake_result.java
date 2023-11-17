@@ -1,18 +1,18 @@
 package com.example.prototypeapi22;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class snake_result extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.snake_result);
+        setContentView(R.layout.activity_snake_result);
 
         Button replay_btn = (findViewById(R.id.snake_replay_button));
         replay_btn.setOnClickListener(new View.OnClickListener(){
