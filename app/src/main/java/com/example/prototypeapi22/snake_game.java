@@ -114,8 +114,10 @@ public class snake_game extends AppCompatActivity {
             Paint paint = new Paint();
             paint.setColor(Color.RED);
             paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(5);
             canvas.drawBitmap(background_image, 0, 0, new Paint());
-            canvas.drawRect(new RectF(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT), paint);
+            canvas.drawRect(new RectF(0, 0, CANVAS_WIDTH+CANVAS_WIDTH/snakeGameRows,
+                    CANVAS_HEIGHT+CANVAS_WIDTH/snakeGameRows), paint);
             // canvas.drawRect(new RectF(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT), paint);
             snakeGame.draw_snake(canvas);
 
@@ -306,6 +308,8 @@ public class snake_game extends AppCompatActivity {
                     break;
             }
 
+            boolean is_eatting = false;
+
             for (final SnakeBody v : snakeBody) {
                 if (v.is_clashing(new_head)) {
                     return false;
@@ -313,10 +317,13 @@ public class snake_game extends AppCompatActivity {
 
                 if (v.is_clashing((feed))) {
                     this.recreate_feed();
+                    is_eatting = true;
                 }
             }
 
-            snakeBody.remove(0);
+            if (! is_eatting) {
+                snakeBody.remove(0);
+            }
             snakeBody.add(new_head);
 
             return true;
@@ -346,7 +353,7 @@ public class snake_game extends AppCompatActivity {
                     if (v.d == snakeBody.get(i-1).d) {
                         b = snake_body_image;
                     } else {
-                        b = snake_bend_body_image;
+                        b = snake_body_image;//snake_bend_body_image;
                         SnakeDiretion lstD = snakeBody.get(i-1).d;
                         // NOTE: snake_bend_body は、
                         //    up: ┗
