@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -40,6 +41,8 @@ public class setuna_game extends AppCompatActivity {
 
         TextView A_text = (findViewById(R.id.A_text));
         TextView B_text = (findViewById(R.id.B_text));
+        A_text.setTextSize(30);
+        B_text.setTextSize(30);
 
 
         Button A_Button = (findViewById(R.id.A_PashButton));
