@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="1690dp"
+        android:layout_height="2055dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
     <TextView
         android:id="@+id/Title"
         android:layout_width="114dp"
         android:layout_height="73dp"
-        android:text="mini-game"
+        android:text="MINI-GAME"
         android:textColor="#512DA8"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -22,43 +32,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
 
-    <Button
+    <ImageView
+        android:id="@+id/NumberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811"
+        app:srcCompat="@drawable/number" />
+
+    <ImageView
+        android:id="@+id/SnakeButton"
+        android:layout_width="169dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83"
+        app:srcCompat="@drawable/snake" />
+
+    <ImageView
         android:id="@+id/SetunaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
-        android:text="刹那の見切り"
-        android:textColor="#00BCD4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/NumberButton"
-        android:layout_width="146dp"
-        android:layout_height="48dp"
-        android:text="タッチザナンバー"
-        android:textColor="#F44336"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.204"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
-
-    <Button
-        android:id="@+id/SnakeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="スネークゲーム"
-        android:textColor="#4CAF50"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toEndOf="@+id/NumberButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.718" />
+        app:srcCompat="@drawable/setuna" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
