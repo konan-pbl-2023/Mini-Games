@@ -3,6 +3,9 @@ package com.example.prototypeapi22;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.Gravity;
@@ -38,6 +41,17 @@ public class setuna_game extends AppCompatActivity {
         a_player.setVisibility(View.VISIBLE);
         b_player.setVisibility(View.VISIBLE);
 
+        /*音関連*/
+        AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_MEDIA)
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                .build();
+        soundPool = new SoundPool.Builder()
+                .setAudioAttributes(audioAttributes)
+                .setMaxStreams(3)
+                .build();
+        action[0] = soundPool.load(this,R.raw.attack,1);
+
 
         TextView A_text = (findViewById(R.id.A_text));
         TextView B_text = (findViewById(R.id.B_text));
@@ -52,6 +66,7 @@ public class setuna_game extends AppCompatActivity {
             public void onClick(View v) {
                 if(inGame == true) {
                     if (reactionRun == true) {
+                        soundPool.play(action[0],1f,1f,0,0,1f);
                         a_reactionStartTime = System.currentTimeMillis();
                         double reactionTime = a_reactionStartTime - visibleTime;
                         A_text.setText("勝ち！" + reactionTime/1000 + "sec");
@@ -62,6 +77,7 @@ public class setuna_game extends AppCompatActivity {
                         visibleCountDown.cancel();
                         goHome();
                     } else {
+                        soundPool.play(action[0],1f,1f,0,0,1f);
                         a_reactionStartTime = System.currentTimeMillis();
                         A_text.setText("お手付き！負け！");
                         a_player.setImageResource(R.drawable.meout);
@@ -80,6 +96,7 @@ public class setuna_game extends AppCompatActivity {
             public void onClick(View v) {
                 if(inGame == true) {
                     if (reactionRun == true) {
+                        soundPool.play(action[0],1f,1f,0,0,1f);
                         b_reactionStartTime = System.currentTimeMillis();
                         double reactionTime = b_reactionStartTime - visibleTime;
                         A_text.setText("負け！");
@@ -90,6 +107,7 @@ public class setuna_game extends AppCompatActivity {
                         visibleCountDown.cancel();
                         goHome();
                     } else {
+                        soundPool.play(action[0],1f,1f,0,0,1f);
                         b_reactionStartTime = System.currentTimeMillis();
                         A_text.setText("勝ち！");
                         B_text.setText("お手付き！負け！");
@@ -138,6 +156,8 @@ public class setuna_game extends AppCompatActivity {
     long b_reactionStartTime;
 
     long visibleTime;
+    public SoundPool soundPool;
+    public int[] action = {0,0,0,0};
 
 
 

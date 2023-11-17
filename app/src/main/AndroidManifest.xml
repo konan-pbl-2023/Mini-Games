@@ -33,7 +33,8 @@
             android:exported="false" />
         <activity
             android:name=".setuna_title"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="userLandscape" />
         <activity
             android:name=".speed_button"
             android:exported="false" />
