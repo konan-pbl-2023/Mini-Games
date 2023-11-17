@@ -32,31 +32,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
 
-    <ImageView
-        android:id="@+id/NumberButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811"
-        app:srcCompat="@drawable/number" />
-
-    <ImageView
+    <ImageButton
         android:id="@+id/SnakeButton"
-        android:layout_width="169dp"
-        android:layout_height="166dp"
+        android:layout_width="158dp"
+        android:layout_height="145dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83"
-        app:srcCompat="@drawable/snake" />
+        app:layout_constraintVertical_bias="0.843"
+        app:srcCompat="@drawable/snake"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/SetunaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,6 +53,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setuna" />
+        app:srcCompat="@drawable/setuna"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/NumberButton"
+        android:layout_width="170dp"
+        android:layout_height="147dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84"
+        app:srcCompat="@drawable/number" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
