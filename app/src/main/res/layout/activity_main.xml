@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="1690dp"
+        android:layout_height="2055dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
     <TextView
         android:id="@+id/Title"
         android:layout_width="114dp"
         android:layout_height="73dp"
-        android:text="mini-game"
+        android:text="MINI-GAME"
         android:textColor="#512DA8"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -22,42 +32,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
 
-    <ImageButton
-        android:id="@+id/SetunaButton"
-        android:layout_width="174dp"
-        android:layout_height="142dp"
-        android:tint="#000B0303"
+    <ImageView
+        android:id="@+id/NumberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setuna"
-        tools:ignore="UseAppTint,SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.811"
+        app:srcCompat="@drawable/number" />
 
-    <ImageButton
-        android:id="@+id/NumberButton"
-        android:layout_width="171dp"
-        android:layout_height="147dp"
-        android:layout_marginTop="472dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/number"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
+    <ImageView
         android:id="@+id/SnakeButton"
-        android:layout_width="181dp"
-        android:layout_height="148dp"
-        android:layout_marginTop="472dp"
+        android:layout_width="169dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/snake"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.83"
+        app:srcCompat="@drawable/snake" />
+
+    <ImageView
+        android:id="@+id/SetunaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setuna" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
