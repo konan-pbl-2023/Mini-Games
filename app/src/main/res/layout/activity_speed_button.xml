@@ -16,7 +16,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="20dp"
-        android:text="Button"
+        android:text="button"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/num_6"
         app:layout_constraintEnd_toStartOf="@+id/num_2"

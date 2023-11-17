@@ -22,7 +22,7 @@
             android:name=".speed_clear"
             android:exported="false" />
         <activity
-            android:name=".speed_play"
+            android:name=".speed_result"
             android:exported="false" />
         <activity
             android:name=".setuna_game_single"

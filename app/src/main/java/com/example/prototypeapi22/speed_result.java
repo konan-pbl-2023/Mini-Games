@@ -23,7 +23,7 @@ public class speed_result extends AppCompatActivity {
         });
 
         Button numberButton2 = (findViewById(R.id.speed_replay_button));
-        numberButton.setOnClickListener(new View.OnClickListener(){
+        numberButton2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent numberGame2 = new Intent(speed_result.this,speed_button.class);
                 startActivity(numberGame2);
