@@ -23,7 +23,8 @@ public class setuna_game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setuna_game);
 
-        ImageView reactionMark = findViewById(R.id.reactionMark);//リアクションマークの取得
+        //リアクションマークの取得
+        ImageView reactionMark = findViewById(R.id.reactionMark);
         reactionMark.setVisibility(View.GONE);
 
         //インターバル10msec
@@ -34,6 +35,7 @@ public class setuna_game extends AppCompatActivity {
         final CountDown visibleCountDown = new CountDown(visibleReactiomTime,interval);
 
 
+        /*画像の取得 設定*/
         ImageView a_player = findViewById(R.id.A_player);
         ImageView b_player = findViewById(R.id.B_player);
         a_player.setImageResource(R.drawable.me);
@@ -54,12 +56,14 @@ public class setuna_game extends AppCompatActivity {
         action[1] = soundPool.load(this,R.raw.dodon,1);
 
 
+        /*テキスト取得　設定*/
         TextView A_text = (findViewById(R.id.A_text));
         TextView B_text = (findViewById(R.id.B_text));
         A_text.setTextSize(30);
         B_text.setTextSize(30);
 
 
+        /*ボタン取得設定*/
         Button A_Button = (findViewById(R.id.A_PashButton));
         Button B_Button = (findViewById(R.id.B_PashButton));
         Button ready_Button = (findViewById(R.id.readyButton));
@@ -173,11 +177,13 @@ public class setuna_game extends AppCompatActivity {
 
 
     private void invisivleReadyButton(){
+        //readyボタン透明化
         Button ready_Button = (findViewById(R.id.readyButton));
         ready_Button.setVisibility(View.GONE);
     }
 
     private void goHome(){
+        //ホームに戻るボタン
         Button ready_Button = (findViewById(R.id.readyButton));
         ready_Button.setVisibility(View.VISIBLE);
         ready_Button.setText("ホームに戻る");
