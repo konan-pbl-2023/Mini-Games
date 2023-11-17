@@ -56,6 +56,7 @@ public class setuna_game_single extends AppCompatActivity {
                 .setMaxStreams(3)
                 .build();
         action[0] = soundPool.load(this,R.raw.attack,1);
+        action[1] = soundPool.load(this,R.raw.dodon,1);
 
 
         Button goHome = (findViewById(R.id.gohome));
@@ -69,6 +70,7 @@ public class setuna_game_single extends AppCompatActivity {
             public void onClick(View v) {
                 if(ready == false) {
                     ready_Button.setText("押せ！");
+                    soundPool.play(action[1],1f,1f,0,0,1f);
                     visibleCountDown.start();
                     ready = true;
                 }else {

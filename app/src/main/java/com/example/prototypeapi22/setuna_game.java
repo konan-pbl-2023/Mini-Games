@@ -51,6 +51,7 @@ public class setuna_game extends AppCompatActivity {
                 .setMaxStreams(3)
                 .build();
         action[0] = soundPool.load(this,R.raw.attack,1);
+        action[1] = soundPool.load(this,R.raw.dodon,1);
 
 
         TextView A_text = (findViewById(R.id.A_text));
@@ -125,6 +126,7 @@ public class setuna_game extends AppCompatActivity {
 
         ready_Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                soundPool.play(action[1],1f,1f,0,0,1f);
                 invisivleReadyButton();
                 visibleCountDown.start();
             }
