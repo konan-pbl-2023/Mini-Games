@@ -6,13 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".setuna_title">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="737dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506"
+        app:srcCompat="@drawable/setuna" />
+
     <TextView
         android:id="@+id/gametitle1"
-        android:layout_width="301dp"
-        android:layout_height="74dp"
-        android:text="刹那の見斬り"
+        android:layout_width="253dp"
+        android:layout_height="68dp"
+        android:text="六徳の見斬り"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +39,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.659" />
@@ -46,4 +57,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.659" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
