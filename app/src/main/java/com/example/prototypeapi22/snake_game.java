@@ -57,7 +57,7 @@ public class snake_game extends AppCompatActivity {
         private final float CANVAS_HEIGHT = 900;
 
         private final long fps = 30;
-        private final long move_fps = 10;
+        private final long move_fps = 7;
         private final long WAIT_TIME = 1000/fps;
         private int move_timing_count = 0;
         private final int move_timing_count_limit = (int)move_fps;
