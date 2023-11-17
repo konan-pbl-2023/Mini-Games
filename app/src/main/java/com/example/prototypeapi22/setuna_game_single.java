@@ -40,7 +40,8 @@ public class setuna_game_single extends AppCompatActivity {
 
 
         TextView A_text = (findViewById(R.id.A_text));
-        TextView B_text = (findViewById(R.id.B_text)A_text.setTextSize(25);
+        TextView B_text = (findViewById(R.id.B_text));
+        A_text.setTextSize(25);
         B_text.setTextSize(25);
 
         Button goHome = (findViewById(R.id.gohome));
