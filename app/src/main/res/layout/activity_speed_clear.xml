@@ -6,4 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".speed_clear">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="457dp"
+        android:layout_height="757dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/speed_text2"
+        android:layout_width="295dp"
+        android:layout_height="56dp"
+        android:text="GAME CLEAR!!"
+        android:textAlignment="center"
+        android:textColor="#3692F4"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <Button
+        android:id="@+id/speed_replay_button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:text="replay"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705" />
+
+    <Button
+        android:id="@+id/speed_return_button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:text="タイトルへ"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
