@@ -42,59 +42,11 @@ public class setuna_game_single extends AppCompatActivity {
         TextView A_text = (findViewById(R.id.A_text));
         TextView B_text = (findViewById(R.id.B_text));
 
-
-        //Button A_Button = (findViewById(R.id.A_PashButton));
-        //Button B_Button = (findViewById(R.id.B_PashButton));
+        Button goHome = (findViewById(R.id.gohome));
         Button ready_Button = (findViewById(R.id.readyButton));
-        /*A_Button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (inGame == true) {
-                    if (reactionRun == true) {
-                        a_reactionStartTime = System.currentTimeMillis();
-                        double reactionTime = a_reactionStartTime - visibleTime;
-                        A_text.setText("勝ち！" + reactionTime / 1000 + "sec");
-                        B_text.setText("負け！");
-                        b_player.setImageResource(R.drawable.enemyout);
-                        inGame = false;
-                        visibleCountDown.cancel();
-                        goHome();
-                    } else {
-                        a_reactionStartTime = System.currentTimeMillis();
-                        A_text.setText("お手付き！負け！");
-                        a_player.setImageResource(R.drawable.meout);
-                        B_text.setText("勝ち！");
-                        inGame = false;
-                        visibleCountDown.cancel();
-                        goHome();
-                    }
-                }
-            }
-        });*/
 
-
-        /*B_Button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (inGame == true) {
-                    b_reactionStartTime = System.currentTimeMillis();
-                    double reactionTime = b_reactionStartTime - visibleTime;
-                    A_text.setText("負け！");
-                    B_text.setText("勝ち！" + reactionTime / 1000 + "sec");
-                    a_player.setImageResource(R.drawable.meout);
-                    inGame = false;
-                    visibleCountDown.cancel();
-                    goHome();
-                } else {
-                    b_reactionStartTime = System.currentTimeMillis();
-                    A_text.setText("勝ち！");
-                    B_text.setText("お手付き！負け！");
-                    b_player.setImageResource(R.drawable.enemyout);
-                    inGame = false;
-                    visibleCountDown.cancel();
-                    goHome();
-                }
-
-            }
-        });*/
+        goHome.setVisibility(View.GONE);
+        goHome.setText("ホームに戻る");
 
         ready_Button.setText("READY");
         ready_Button.setOnClickListener(new View.OnClickListener() {
@@ -212,10 +164,10 @@ public class setuna_game_single extends AppCompatActivity {
     }
 
     private void goHome() {
-        Button ready_Button = (findViewById(R.id.readyButton));
-        ready_Button.setVisibility(View.VISIBLE);
-        ready_Button.setText("ホームに戻る");
-        ready_Button.setOnClickListener(new View.OnClickListener() {
+        Button goHomeButton = (findViewById(R.id.gohome));
+        goHomeButton.setVisibility(View.VISIBLE);
+        //ready_Button.setText("ホームに戻る");
+        goHomeButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
