@@ -33,6 +33,7 @@ public class setuna_game_single extends AppCompatActivity {
         final CountDown visibleCountDown = new CountDown(visibleReactiomTime, interval);
 
 
+        /*画像取得画像設定*/
         ImageView a_player = findViewById(R.id.A_oneplayer);
         ImageView b_player = findViewById(R.id.player2);
         a_player.setImageResource(R.drawable.me);
@@ -41,12 +42,14 @@ public class setuna_game_single extends AppCompatActivity {
         b_player.setVisibility(View.VISIBLE);
 
 
+        /*テキスト取得　サイズ設定*/
         TextView A_text = (findViewById(R.id.A_text));
         TextView B_text = (findViewById(R.id.B_text));
         A_text.setTextSize(25);
         B_text.setTextSize(25);
 
 
+        /*音設定*/
         AudioAttributes audioAttributes = new AudioAttributes.Builder()
                 .setUsage(AudioAttributes.USAGE_MEDIA)
                 .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
@@ -59,6 +62,7 @@ public class setuna_game_single extends AppCompatActivity {
         action[1] = soundPool.load(this,R.raw.dodon,1);
 
 
+        /*ボタン取得ボタン設定*/
         Button goHome = (findViewById(R.id.gohome));
         Button ready_Button = (findViewById(R.id.readyButton));
 
@@ -105,6 +109,7 @@ public class setuna_game_single extends AppCompatActivity {
     }
 
 
+    /*タイマー*/
     class CountDown extends CountDownTimer {
         CountDown(long millInFuture, long countDownInterval) {
             super(millInFuture, countDownInterval);
